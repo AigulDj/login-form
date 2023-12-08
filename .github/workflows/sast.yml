@@ -26,7 +26,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Semgrep - Lightweight SAST to find bugs and enfource code standards
-        uses: returntocorp/semgrep-action@v1
+        uses: semgrep/semgrep-action@v1
         with:
           config: >- # more at semgrep.dev/explore
             p/security-audit
@@ -50,5 +50,5 @@ jobs:
       - name: Upload Test results
         uses: actions/upload-artifact@main
         with:
-           name: Depcheck report
-           path: ${{github.workspace}}/reports
+          name: Depcheck report
+          path: ${{github.workspace}}/reports
